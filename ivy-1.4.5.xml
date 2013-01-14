@@ -1,13 +1,13 @@
 <ivy-module version="2.0">
-  <info organisation="de.ocean-labs" module="mcp" revision="1.4.5" status="release" publication="20130113234107"/>
+  <info organisation="de.ocean-labs" module="mcp" revision="1.4.5" status="release" publication="20130114000612"/>
   <configurations>
-	<conf name="compile" visibility="public" description="" />
+	<conf name="default" visibility="public" description=""/>
 	<conf name="sources" visibility="public" description=""/>
 	<conf name="srg" visibility="public" description=""/>
   </configurations>
   <publications>
     <artifact name="client_deobf" ext="srg" type="srg" conf="srg"/>
-    <artifact name="mcp" ext="jar" type="jar" />
+    <artifact name="mcp" ext="jar" type="jar" conf="default"/>
     <artifact name="mcp" type="src" ext="jar" conf="sources"/>
   </publications>
   <dependencies>
