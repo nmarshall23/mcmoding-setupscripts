@@ -1,0 +1,17 @@
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+  <info organisation="de.ocean-labs" module="mcp" revision="1.4.7" status="release" publication="20130115012103"/>
+  <configurations>
+<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="master"/>
+ <conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+	<conf name="sources" visibility="public" description=""/>
+	<conf name="srg" visibility="public" description=""/>
+  </configurations>
+  <publications>
+    <artifact name="retroguard" ext="srg" type="srg" conf="srg"/>
+    <artifact name="minecraft" ext="jar" type="jar" conf="master"/>
+    <artifact name="minecraft-source" type="src" ext="jar" conf="sources" e:classifier="sources" />
+  </publications>
+  <dependencies>
+    <dependency org="org.lwjgl.lwjgl" name="lwjgl" rev="2.8.5"/>
+  </dependencies>
+</ivy-module>
